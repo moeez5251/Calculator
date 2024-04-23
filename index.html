@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="main">
+            <h1 class="heading">Calculator</h1>
+            <p class="text">Decimal Conversions ? </p>
+            <a href="binary.html" class="link" target="_blank">Click Here</a>
+        </div>
+        <input type="text" id="main-output" disabled></input>
+        <div class="first">
+            <button class="btn"  onclick="output('7')" accesskey="7">7    </button>
+            <button class="btn"  onclick="output('8')" accesskey="8">8</button>
+            <button class="btn"  onclick="output('9')" accesskey="9">9</button>
+            <button id="del" class="btn"  onclick="del()" accesskey="Backspace">DEL</button>
+                <button class="btn"  onclick="output('4')" accesskey="4">4</button>
+                <button class="btn"  onclick="output('5')" accesskey="5">5</button>
+                <button class="btn"  onclick="output('6')" accesskey="6">6</button>
+                <button class="btn"  onclick="output('+')" accesskey="+">+</button>
+                <button class="btn"  onclick="output('3')" accesskey="3">3</button>
+                <button class="btn"  onclick="output('2')" accesskey="2">2</button>
+                <button class="btn"  onclick="output('1')" accesskey="1">1</button>
+                <button class="btn"  onclick="output('-')" accesskey="-">-</button>
+                <button class="btn"  onclick="output('.')" accesskey=".">.</button>
+                <button class="btn"  onclick="output('0')" accesskey="0">0</button>
+                <button class="btn"  onclick="output('/')" accesskey="/">/</button>
+                <button class="btn"  onclick="output('*')" accesskey="*">*</button>
+                <button class="btn"  onclick="output('(')" accesskey="(">(</button>
+                <button class="btn"  onclick="output(')')" accesskey=")">)</button>
+                <button id="reset" class="btn"  onclick="reset()" >Reset</button>
+                <button id="clear" class="btn"  onclick="calculate()" accesskey="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
