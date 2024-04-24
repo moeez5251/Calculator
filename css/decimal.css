@@ -199,6 +199,7 @@ body{
 }
 #One,#Two{
     left: 50px;
+    width: 60%;
 }
 .op{
     margin-left: 130px;
