@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: baseline;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .boxes{
     background-color: black;
@@ -21,7 +21,7 @@ body{
     border-radius: 14px;
     box-shadow: 1px 5px 12px 1px #dbd0d0;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
 }
 .boxes:hover{
     color: rgb(140, 224, 245);
@@ -29,17 +29,17 @@ body{
     
 }
 
-#input{
+.Operations,#input{
     position: relative;
     font-family: "Ubuntu", sans-serif;
-    padding-top: 60px;
+    padding-top: 40px;
     left: 47px;
     width: fit-content;
 }
 .input{
     position: relative;
     font-family: "Ubuntu", sans-serif;
-    padding-top: 60px;
+    padding-top: 15px;
     left: 47px;
     width: fit-content;
 }
@@ -63,19 +63,41 @@ body{
     width: 71%;
     right: -28%;
     transition: all 1s ease-in-out;
+    z-index: -1;
 
 }
-
+#One,#Two{
+    left: 276px;
+}
 .input2,.input3,.input4{
     position: relative;
     width: 71%;
     right: -28%;   
-    transition: all 1s ease-in-out;
+    transition: all 1.5s ease-in-out;
     opacity: 0;
     color: black;
+    z-index: -1;
    
 }
-
+.buttons1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.btns{
+    padding: 13px 34px;
+    background: linear-gradient(#020202, #d70303);
+    margin: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 17px;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+}
+#result{
+    top: -32px;
+    left: 10%;
+}
 .theme{
     background-color: black;
     position: absolute;
@@ -97,17 +119,19 @@ body{
 
 .dark-theme{
     background-color: black;
-    transition: all 1.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
     .theme::before{
         position: relative;
         content: '🌑';
     }
     .boxes{
-        background-color: darkorange;
+        transition:  all 1s ease-in-out;
         color: black;
+        background-color: darkorange;
     box-shadow: 1px 5px 12px 1px black;
-    transition:  all 0.5s ease-in-out;
+   
     }
+
     .boxes:hover{
     box-shadow: 1px 5px 12px 1px gold;
     }
@@ -123,6 +147,17 @@ body{
     }
     .theme{
         background-color: white;
+    }
+    .Operations{
+        color: white;
+    }
+    .btns{
+        background: linear-gradient(#242121, #d70303);
+    }
+    #result{
+        background: none;
+        color: white;
+        border: 2px solid white;
     }
 }
 
@@ -162,8 +197,21 @@ body{
     left: 1px;
     top: 0px;
 }
-
-
+#One,#Two{
+    left: 50px;
+}
+.op{
+    margin-left: 130px;
+        width: 45%;
+}
+.btns{
+    padding: 13px 15px;
+    font-size: 14px;
+}
+.comp{
+    font-size: 18px;
+    left: -85px;
+}
 }
 @media only screen and (max-width:329px )  {
 
@@ -172,6 +220,14 @@ body{
     left: -1px;
     top: -2px;
 }
-
-
+#Input{
+    width: 54%;
+    margin-left: 130px;
+}
+.op{
+    margin-left: 160px;
+}
+.btns{
+    padding: 11px 13px;
+}
 }
