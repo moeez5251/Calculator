@@ -107,7 +107,7 @@ body{
     background-color: black;
     position: absolute;
     right: 10px;
-    top: 450px;
+    top: 530px;
     height: 34px;
     border-radius: 45px;
     font-size: 24px;
@@ -191,11 +191,12 @@ body{
 }
 .theme{
     position: absolute;
-    top: 472px;
+    top: 570px;
     font-size: 28px;
     border-radius: 20px;
     height: 36px;
     width: 36px;
+    right: 20px;
 }
 .theme::before{
     position: absolute;
