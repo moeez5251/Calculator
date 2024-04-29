@@ -29,14 +29,15 @@ menu[0].addEventListener('click', () => {
         document.getElementById('Two').value = "";
         inp.value = "";
 
-});
 
+});
+menu[0].click();
 menu[1].addEventListener('click', () => {
         page1.style.opacity = '0';
         page3.style.opacity = '0';
         page4.style.opacity = '0';
         page2.style.opacity = '1';
-        page2.style.transform='translate(0px,-380px)'
+        page2.style.transform = 'translate(0px,-380px)'
         page1.style.transform = 'translateX(-400px)';
         page3.style.transform = 'translateX(-400px)';
         page4.style.transform = 'translateX(-400px)';
@@ -58,7 +59,7 @@ menu[2].addEventListener('click', () => {
         page4.style.opacity = '0';
         page1.style.transform = 'translateX(-400px)';
         page2.style.transform = 'translate(-400px,-400px)';
-        page3.style.transform='translate(0px,-610px)'
+        page3.style.transform = 'translate(0px,-610px)'
         page4.style.transform = 'translateX(-400px)';
         page3.style.opacity = '1';
         menu[0].style.color = 'grey';
@@ -106,6 +107,18 @@ function input1() {
         Decimal.value = Decimalvalue;
         Octal.value = Decimalvalue.toString(8);
         Hexa.value = Decimalvalue.toString(16).toUpperCase();
+        let valid = true;
+        for (let i = 0; i < inputvalue.length; i++) {
+                if (inputvalue[i] !== "0" && inputvalue[i] !== "1") {
+                        valid = false;
+                        break;
+                }
+        }
+        if (!valid) {
+                inp.style.backgroundColor = "red";
+        } else {
+                inp.style.backgroundColor = "";
+        }
 
         // ==========> Complements Conversion <===========
 
@@ -131,9 +144,6 @@ function input1() {
 
         }
 }
-
-inp.addEventListener('input', input1)
-
 function input2() {
         let Decimal = document.getElementById('fourth');
         let Octal = document.getElementById('fifth');
@@ -143,6 +153,18 @@ function input2() {
         Decimal.value = Decimalvalue;
         Octal.value = Decimalvalue.toString(2);
         Hexa.value = Decimalvalue.toString(16).toUpperCase();
+        let valid = true;
+        for (let i = 0; i < inputvalue.length; i++) {
+                if (inputvalue[i] !== "0" && inputvalue[i] !== "1" && inputvalue[i] !== "2" && inputvalue[i] !== "3" && inputvalue[i] !== "4" && inputvalue[i] !== "5" && inputvalue[i] !== "6" && inputvalue[i] !== "7") {
+                        valid = false;
+                        break;
+                }
+        }
+        if (!valid) {
+                inp.style.backgroundColor = "red";
+        } else {
+                inp.style.backgroundColor = "";
+        }
 
 }
 function input3() {
@@ -154,6 +176,18 @@ function input3() {
         Decimal.value = Decimalvalue;
         Octal.value = Decimalvalue.toString(2);
         Hexa.value = Decimalvalue.toString(8);
+        let valid = true;
+        for (let i = 0; i < inputvalue.length; i++) {
+                if (inputvalue[i] !== "0" && inputvalue[i] !== "1" && inputvalue[i] !== "2" && inputvalue[i] !== "3" && inputvalue[i] !== "4" && inputvalue[i] !== "5" && inputvalue[i] !== "6" && inputvalue[i] !== "7" && inputvalue[i] !== "8" && inputvalue[i] !== "9" && inputvalue[i] !== "A" && inputvalue[i] !== "B" && inputvalue[i] !== "C" && inputvalue[i] !== "D" && inputvalue[i] !== "E" && inputvalue[i] !== "F") {
+                        valid = false;
+                        break;
+                }
+        }
+        if (!valid) {
+                inp.style.backgroundColor = "red";
+        } else {
+                inp.style.backgroundColor = "";
+        }
 }
 function input4() {
         let Binary = document.getElementById('tenth');
@@ -186,10 +220,13 @@ menu[4].addEventListener('click', () => {
         menu[4].style.color = 'white';
         menu[5].style.color = 'grey';
         menu[6].style.color = 'grey';
-        inputs[0].value=""
-        inputs[1].value=""
-        result.value=""
+        inputs[0].value = ""
+        inputs[1].value = ""
+        result.value = ""
         buttons[0].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 2);
                 let b = parseInt(inputs[1].value, 2);
                 let c = a + b;
@@ -197,6 +234,9 @@ menu[4].addEventListener('click', () => {
 
         });
         buttons[1].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 2);
                 let b = parseInt(inputs[1].value, 2);
                 let c = a - b;
@@ -204,6 +244,9 @@ menu[4].addEventListener('click', () => {
 
         });
         buttons[2].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 2);
                 let b = parseInt(inputs[1].value, 2);
                 let c = a * b;
@@ -217,13 +260,16 @@ menu[5].addEventListener('click', () => {
         inputs[0].type = 'number';
         inputs[1].type = 'number';
         result.type = 'number';
-        inputs[0].value=""
-        inputs[1].value=""
-        result.value=""
+        inputs[0].value = ""
+        inputs[1].value = ""
+        result.value = ""
         menu[4].style.color = 'grey';
         menu[5].style.color = 'white';
         menu[6].style.color = 'grey';
         buttons[0].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 8);
                 let b = parseInt(inputs[1].value, 8);
                 let c = a + b;
@@ -231,6 +277,9 @@ menu[5].addEventListener('click', () => {
 
         });
         buttons[1].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 8);
                 let b = parseInt(inputs[1].value, 8);
                 let c = a - b;
@@ -238,6 +287,9 @@ menu[5].addEventListener('click', () => {
 
         });
         buttons[2].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 8);
                 let b = parseInt(inputs[1].value, 8);
                 let c = a * b;
@@ -252,10 +304,13 @@ menu[6].addEventListener('click', () => {
         menu[4].style.color = 'grey';
         menu[5].style.color = 'grey';
         menu[6].style.color = 'white';
-        inputs[0].value=""
-        inputs[1].value=""
-        result.value=""
+        inputs[0].value = ""
+        inputs[1].value = ""
+        result.value = ""
         buttons[0].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 16);
                 let b = parseInt(inputs[1].value, 16);
                 let c = a + b;
@@ -263,6 +318,9 @@ menu[6].addEventListener('click', () => {
 
         });
         buttons[1].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 16);
                 let b = parseInt(inputs[1].value, 16);
                 let c = a - b;
@@ -270,6 +328,9 @@ menu[6].addEventListener('click', () => {
 
         });
         buttons[2].addEventListener('click', () => {
+                if (inputs[0].value == "" || inputs[1].value == "") {
+                        alert(" Kindly Input All Required Values.");
+                }
                 let a = parseInt(inputs[0].value, 16);
                 let b = parseInt(inputs[1].value, 16);
                 let c = a * b;

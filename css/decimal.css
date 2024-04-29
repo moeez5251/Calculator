@@ -6,7 +6,7 @@
 }
 body{
     transition: all 1.5s ease-in-out;
-    height: 0px;
+    height: 100vh;
 }
 .buttons{
     display: flex;
@@ -132,13 +132,14 @@ body{
     .boxes{
         transition:  all 1s ease-in-out;
         color: black;
-        background-color: darkorange;
     box-shadow: 1px 5px 12px 1px black;
+    background: linear-gradient(45deg, #762293, #e31010);
+    
    
     }
 
     .boxes:hover{
-    box-shadow: 1px 5px 12px 1px gold;
+    box-shadow: 1px 5px 12px 1px palevioletred;
     }
     #input,.input{
         color: white;
