@@ -103,6 +103,17 @@ body{
     position: relative;
     top: -735px;
 }
+.red{
+    animation: back  0.3s  linear infinite 0s;
+   }
+   @keyframes back{
+        0%{
+        background-color: white;;
+        }
+        100%{
+        background-color: red;;
+        }
+   }
 .theme{
     background-color: black;
     position: absolute;

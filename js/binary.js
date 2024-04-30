@@ -1,6 +1,5 @@
 let page1 = document.querySelector('.input1');
 let inp = document.getElementById('Input');
-
 let page2 = document.querySelector('.input2');
 let page3 = document.querySelector('.input3');
 let page4 = document.querySelector('.input4');
@@ -115,9 +114,9 @@ function input1() {
                 }
         }
         if (!valid) {
-                inp.style.backgroundColor = "red";
+                inp.classList.add('red');
         } else {
-                inp.style.backgroundColor = "";
+                inp.classList.remove('red');
         }
 
         // ==========> Complements Conversion <===========
@@ -161,9 +160,11 @@ function input2() {
                 }
         }
         if (!valid) {
-                inp.style.backgroundColor = "red";
+                inp.classList.add('red');
+
         } else {
-                inp.style.backgroundColor = "";
+                inp.classList.remove('red');
+
         }
 
 }
@@ -178,15 +179,17 @@ function input3() {
         Hexa.value = Decimalvalue.toString(8);
         let valid = true;
         for (let i = 0; i < inputvalue.length; i++) {
-                if (inputvalue[i] !== "0" && inputvalue[i] !== "1" && inputvalue[i] !== "2" && inputvalue[i] !== "3" && inputvalue[i] !== "4" && inputvalue[i] !== "5" && inputvalue[i] !== "6" && inputvalue[i] !== "7" && inputvalue[i] !== "8" && inputvalue[i] !== "9" && inputvalue[i] !== "A" && inputvalue[i] !== "B" && inputvalue[i] !== "C" && inputvalue[i] !== "D" && inputvalue[i] !== "E" && inputvalue[i] !== "F") {
+                if (inputvalue[i] !== "0" && inputvalue[i] !== "1" && inputvalue[i] !== "2" && inputvalue[i] !== "3" && inputvalue[i] !== "4" && inputvalue[i] !== "5" && inputvalue[i] !== "6" && inputvalue[i] !== "7" && inputvalue[i] !== "8" && inputvalue[i] !== "9" && inputvalue[i] !== "A" && inputvalue[i] !== "B" && inputvalue[i] !== "C" && inputvalue[i] !== "D" && inputvalue[i] !== "E" && inputvalue[i] !== "F"&& inputvalue[i] !== "a"&& inputvalue[i] !== "b"&& inputvalue[i] !== "c"&& inputvalue[i] !== "d"&& inputvalue[i] !== "e"&& inputvalue[i] !== "f") {
                         valid = false;
                         break;
                 }
         }
         if (!valid) {
-                inp.style.backgroundColor = "red";
+                inp.classList.add('red');
+
         } else {
-                inp.style.backgroundColor = "";
+                inp.classList.remove('red');
+
         }
 }
 function input4() {
@@ -223,6 +226,7 @@ menu[4].addEventListener('click', () => {
         inputs[0].value = ""
         inputs[1].value = ""
         result.value = ""
+
         buttons[0].addEventListener('click', () => {
                 if (inputs[0].value == "" || inputs[1].value == "") {
                         alert(" Kindly Input All Required Values.");
