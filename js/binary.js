@@ -226,7 +226,36 @@ menu[4].addEventListener('click', () => {
         inputs[0].value = ""
         inputs[1].value = ""
         result.value = ""
-
+        inputs[0].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[0].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[0].classList.add('red');
+                } else {
+                        inputs[0].classList.remove('red');
+                }
+        });
+        inputs[1].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[1].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[1].classList.add('red');
+                } else {
+                        inputs[1].classList.remove('red');
+                }
+        });
         buttons[0].addEventListener('click', () => {
                 if (inputs[0].value == "" || inputs[1].value == "") {
                         alert(" Kindly Input All Required Values.");
@@ -270,6 +299,37 @@ menu[5].addEventListener('click', () => {
         menu[4].style.color = 'grey';
         menu[5].style.color = 'white';
         menu[6].style.color = 'grey';
+        inputs[0].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[0].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1" && d[i] !== "2" && d[i] !== "3" && d[i] !== "4" && d[i] !== "5" && d[i] !== "6" && d[i] !== "7") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[0].classList.add('red');
+                } else {
+                        inputs[0].classList.remove('red');
+                }
+        });
+        inputs[1].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[1].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1" && d[i] !== "2" && d[i] !== "3" && d[i] !== "4" && d[i] !== "5" && d[i] !== "6" && d[i] !== "7") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[1].classList.add('red');
+                } else {
+                        inputs[1].classList.remove('red');
+                }
+        });
+
         buttons[0].addEventListener('click', () => {
                 if (inputs[0].value == "" || inputs[1].value == "") {
                         alert(" Kindly Input All Required Values.");
@@ -311,6 +371,38 @@ menu[6].addEventListener('click', () => {
         inputs[0].value = ""
         inputs[1].value = ""
         result.value = ""
+
+        inputs[0].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[0].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1" && d[i] !== "2" && d[i] !== "3" && d[i] !== "4" && d[i] !== "5" && d[i] !== "6" && d[i] !== "7" && d[i] !== "8" && d[i] !== "9" && d[i] !== "A" && d[i] !== "B" && d[i] !== "C" && d[i] !== "D" && d[i] !== "E" && d[i] !== "F"&& d[i] !== "a"&& d[i] !== "b"&& d[i] !== "c"&& d[i] !== "d"&& d[i] !== "e"&& d[i] !== "f") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[0].classList.add('red');
+                } else {
+                        inputs[0].classList.remove('red');
+                }
+        });
+        inputs[1].addEventListener('input',()=>{
+                let valid = true;
+                let d=inputs[1].value;
+                for (let i = 0; i < d.length; i++) {
+                        if (d[i] !== "0" && d[i] !== "1" && d[i] !== "2" && d[i] !== "3" && d[i] !== "4" && d[i] !== "5" && d[i] !== "6" && d[i] !== "7" && d[i] !== "8" && d[i] !== "9" && d[i] !== "A" && d[i] !== "B" && d[i] !== "C" && d[i] !== "D" && d[i] !== "E" && d[i] !== "F"&& d[i] !== "a"&& d[i] !== "b"&& d[i] !== "c"&& d[i] !== "d"&& d[i] !== "e"&& d[i] !== "f") {
+                                valid = false;
+                                break;
+                        }
+                }
+                if (!valid) {
+                        inputs[1].classList.add('red');
+                } else {
+                        inputs[1].classList.remove('red');
+                }
+        });
+
         buttons[0].addEventListener('click', () => {
                 if (inputs[0].value == "" || inputs[1].value == "") {
                         alert(" Kindly Input All Required Values.");

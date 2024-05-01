@@ -155,7 +155,6 @@ body{
     #input,.input{
         color: white;
     }
-   
     .dark-inp{
     transition:  all 1s ease-in-out;
         color: white;
@@ -169,11 +168,12 @@ body{
         color: white;
     }
     .btns{
-        background: linear-gradient(#242121, #d70303);
+        background: linear-gradient(#7c2b04, #d70303);
     }
     #result{
         background: none;
-        color: white;
+        color: lime;
+        text-shadow: -2px 18px 16px lime;
         border: 2px solid white;
     }
 }
