@@ -200,7 +200,20 @@ function input4() {
         Binary.value = inputValue.toString(2);
         Octal.value = inputValue.toString(8);
         Hexa.value = inputValue.toString(16).toUpperCase();
+        let valid = true;
+        for (let i = 0; i < inputValue.length; i++) {
+                if (inputValue[i] !== "0" && inputValue[i] !== "1" && inputValue[i] !== "2" && inputValue[i] !== "3" && inputValue[i] !== "4" && inputValue[i] !== "5" && inputValue[i] !== "6" && inputValue[i] !== "7" && inputValue[i] !== "8" && inputValue[i] !== "9") {
+                        valid = false;
+                        break;
+                }
+        }
+        if (!valid) {
+                inp.classList.add('red');
 
+        } else {
+                inp.classList.remove('red');
+
+        }
 }
 
 // =================>Themes<==============
