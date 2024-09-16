@@ -26,7 +26,7 @@ menu[0].addEventListener('click', () => {
                 for (let i = 0; i < inputvalue.length; i++) {
                         if (inputvalue[i] !== "0" && inputvalue[i] !== "1") {
                                 valid = false;
-                                break;
+                              break;
                         }
                 }
                 if (!valid) {
