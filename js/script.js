@@ -1,7 +1,7 @@
 // ==============>Calculator<==============
 let main_output = document.getElementById("main");
 function output(x) {
-    main_output.value+=x
+    main_output.value += x
 }
 function reset() {
     main_output.value = "";
@@ -41,9 +41,18 @@ function keys(y) {
 }
 document.addEventListener('keydown', keys);
 
-document.querySelector("label").addEventListener("change",()=>{
-    document.querySelector("html").classList.toggle("dark");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        document.removeEventListener('keydown', keys);
+
+    }
+    else {
+        document.addEventListener('keydown', keys);
+
+    }
 })
-document.querySelector(".svg").addEventListener("click",()=>{
-    document.querySelector(".sidebar").classList.toggle("left-10");
+
+
+document.querySelector("label").addEventListener("change", () => {
+    document.querySelector("html").classList.toggle("dark");
 })

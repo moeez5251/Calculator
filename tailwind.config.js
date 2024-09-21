@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -6,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'custom': ['Roboto', 'system-ui', 'sans-serif'],
+        'custom2': ['Ubuntu', 'sans-serif'],
       },
     },
   },

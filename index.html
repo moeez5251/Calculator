@@ -5,20 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="CSS/dec.css">
     <title>Online Calculator App</title>
 </head>
-<body  class="bg-white font-custom  dark:bg-purple-800 relative z-0" id="body">
-    <div class="sidebar absolute top-[35px] -left-full transition-all  z-10">
-        <a href="binary.html" target="_blank" class="underline dark:text-white" >Binary Conversions </a>
-    </div>
-    <div class="svg absolute top-1 cursor-pointer z-10">
-        <svg xmlns="http://www.w3.org/2000/svg" class="dark:invert"  viewBox="0 0 24 24" width="40" height="40" color="#000000" fill="none">
-            <path d="M3.99982 11.9998L19.9998 11.9998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M8.99963 17C8.99963 17 3.99968 13.3176 3.99966 12C3.99965 10.6824 8.99966 7 8.99966 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </div>
+<body  class="bg-white font-custom  dark:bg-[#540179] relative z-0 transition-all" id="body" >
+
     <div class="app w-full m-auto relative top-10  rounded-2xl lg:w-[35vw] sm:w-[60vw]">
         <nav class="p-4">
             <ul class="flex justify-between">
@@ -41,7 +35,7 @@
         </div>
 
         <div
-            class="w-[97%] sm:w-[90%]  m-auto p-4 rounded-xl buttons grid grid-cols-4 gap-4 bg-gray text-black shadow-md shadow-gray-700 dark:shadow-[#121314]">
+            class="w-[97%] sm:w-[90%]  m-auto p-4 rounded-xl  grid grid-cols-4 gap-4 bg-gray text-black shadow-md shadow-gray-700 dark:shadow-[#121314]">
             <button
                 class="w-fit text-center m-auto bg-gray-200 px-5 py-2 rounded-full font-[600] text-2xl border-none outline-none hover:bg-[#c5c5c5]"
                 accesskey="7" onclick="output('7')">7</button>
@@ -93,8 +87,76 @@
         </div>
 
     </div>
+
+    <div class="binary relative top-[20%] font-custom2">
+        <div class="buttons">
+            <div class="boxes">Binary to all</div>
+            <div class="boxes">Octal to all</div>
+            <div class="boxes">Hexa to all</div>
+            <div class="boxes">Decimal to all</div>
+        </div>
+        <h2 id="input"  class="dark:text-white">Input Here :</h2>
+        <input type="number" class="inp " id="Input" placeholder="Enter Number " required>
+        <div class="input1 dark:text-white">
+            <h2 class="input ">Decimal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="first" disabled>
+            <h2 class="input ">Octal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="second" disabled>
+            <h2 class="input">Hexa :</h2>
+            <input type="text" class="inp dark-inp dark:text-white" id="third" disabled>
+            <h2 class="input comp">One's Complement :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="One" disabled>
+            <h2 class="input comp">Two's Complement :</h2>
+            <input type="text" class="inp dark-inp dark:text-white" id="Two" disabled>
+        </div>
+        <div class="input2">
+            <h2 class="input dark:text-white">Decimal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="fourth" disabled>
+            <h2 class="input  dark:text-white">Binary :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="fifth" disabled>
+            <h2 class="input dark:text-white">Hexa :</h2>
+            <input type="text" class="inp dark-inp dark:text-white" id="sixth" disabled>
+        </div>
+        <div class="input3 dark:text-white">
+            <h2 class="input dark:text-white">Decimal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="seventh" disabled>
+            <h2 class="input  dark:text-white">Binary :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="eighth" disabled>
+            <h2 class="input dark:text-white">Octal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="ninth" disabled>
+        </div>
+        <div class="input4 dark:text-white">
+            <h2 class="input dark:text-white">Binary :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="tenth" disabled>
+            <h2 class="input dark:text-white ">Octal :</h2>
+            <input type="number" class="inp dark-inp dark:text-white" id="eleventh" disabled>
+            <h2 class="input dark:text-white">Hexa :</h2>
+            <input type="text" class="inp dark-inp dark:text-white" id="twelveth" disabled>
+        </div>
+        <div class="Oper">
+    
+            <div class="buttons">
+                <div class="boxes">Binary Operations</div>
+                <div class="boxes">Octal Operations</div>
+                <div class="boxes">Hexa Opetaions</div>
+        </div>
+            <h2 class="Operations dark:text-white">Input Here :</h2>
+        <input type="number" class="inp op "  placeholder="Enter Number 1" name="Inp" required>
+            <h2 class="Operations dark:text-white">Input Here :</h2>
+        <input type="number" class="inp op "  placeholder="Enter Number 2" name="inp" required>
+        <div class="buttons1 dark:text-white">
+            <div class="btns">Add</div>
+            <div class="btns">Subtract</div>
+            <div class="btns">Multiply</div>
+        </div>
+        <h2 class="Operations dark:text-white">Result :</h2>
+        <input type="number" class="inp op dark:text-white"  id="result" name="inp1" disabled>
+    </div>
+        
+
     </div>
 </body>
 <script src="js/script.js"></script>
+<script src="js/binary.js"></script>
 
 </html>

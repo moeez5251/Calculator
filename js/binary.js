@@ -209,14 +209,6 @@ menu[3].addEventListener('click', () => {
 });
 
 
-
-// =================>Themes<==============
-let theme = document.querySelector('.theme');
-const body = document.querySelector('body');
-theme.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-});
-
 // =================>Airthmetic Operations<==============
 
 let buttons = document.querySelectorAll('.btns');

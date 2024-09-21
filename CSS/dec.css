@@ -1,0 +1,188 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    
+}
+.buttons{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+
+}
+.boxes{
+    background-color: black;
+    color: white;
+    padding: 12px 19px;
+    font-size: 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+.boxes:hover{
+    color: rgb(140, 224, 245);
+    box-shadow: 1px 5px 12px 1px #494949;
+    
+}
+
+.Operations,#input{
+    position: relative;
+    
+    padding-top: 40px;
+    left: 47px;
+    width: fit-content;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.input{
+    position: relative;
+    
+    padding-top: 15px;
+    left: 47px;
+    width: fit-content;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.inp{
+    position: relative;
+    left: 16%;
+    top: -33px;
+    padding: 7px 0px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 19px;
+    
+    border: 2px solid black;
+    font-weight: 500;
+    transition:  all 0.6s ease-in-out;
+    color: black;
+    margin-left: 27px;
+}
+.input1{
+    position: relative;
+    width: 71%;
+    right: -28%;
+    transition: all 1s ease-in-out;
+    z-index: -100;
+
+}
+#One,#Two{
+    left: 276px;
+}
+.input2,.input3,.input4{
+    position: relative;
+    width: 71%;
+    right: -28%;   
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    color: black;
+    z-index: -100;
+   
+}
+.buttons1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.btns{
+    padding: 13px 34px;
+    background: linear-gradient(#020202, #d70303);
+    margin: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 17px;
+    
+    cursor: pointer;
+}
+#result{
+    top: -41px;
+    left: 10%;
+}
+.Oper{
+    position: relative;
+    top: -735px;
+}
+.red{
+    animation: back  0.3s  linear infinite 0s;
+   }
+   @keyframes back{
+        0%{
+        background-color: white;;
+        }
+        100%{
+        background-color: red;;
+        }
+   }
+
+
+@media only screen and (max-width:1107px )  {
+.input{
+    left: -40px;
+}
+.inp{
+    width: 65%;
+    margin-left: 45px;
+}
+
+#Input{
+    width: 54%;
+    margin-left: 100px;
+}
+.boxes{
+    font-size: 10px;
+}
+#input{
+    left: 7px;
+}
+.boxes{
+    padding: 12px 7px;
+    margin: 20px 8px;
+}
+
+#One,#Two{
+    left: 50px;
+    width: 60%;
+}
+.op{
+    margin-left: 130px;
+        width: 45%;
+}
+.btns{
+    padding: 13px 15px;
+    font-size: 14px;
+    margin: 20px 12px;
+}
+.comp{
+    font-size: 18px;
+    left: -85px;
+}
+.buttons1{
+    margin-left: 30px;
+}
+}
+@media only screen and (max-width:329px )  {
+
+
+#Input{
+    width: 54%;
+    margin-left: 130px;
+}
+.op{
+    margin-left: 104px;
+}
+.btns{
+    padding: 11px 13px;
+}
+.Operations{
+    position: relative;
+    left: 10px;
+}
+#result{
+    left: 3%;
+}
+}
